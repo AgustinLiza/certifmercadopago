@@ -3,8 +3,8 @@ var exphbs  = require('express-handlebars');
 var bodyParser = require('body-parser')
 var port = process.env.PORT || 3000;
 
-const URL_PROD = "https://mercado-pago-demo.herokuapp.com";
-//const URL_PROD = "https://09959d0744ca.ngrok.io";
+const URL_PROD = "https://agustinliza-certifmercadopago.herokuapp.com";
+
 
 var app = express();
 var mercadopago = require('mercadopago');
@@ -24,7 +24,6 @@ app.use(bodyParser.json());
 app.get('/', function (req, res) {
     res.render('home');
 });
-
 app.get('/success', function (req, res) {
     res.render('success',req.query);
 });
